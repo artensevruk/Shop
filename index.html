@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="x-icon" href="image/shoes.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
@@ -21,7 +22,7 @@
     <script>
       new WOW().init();
     </script>
-    <title>Document</title>
+    <title>Sneakers and Clothes</title>
   </head>
   <body>
     <div class="wrapper">
@@ -36,6 +37,7 @@
             </div>
             <div class="Menu">
               <ul>
+                <li><input class="search" placeholder="поиск..."></li>
                 <li>Кросовки</li>
                 <li>Куртки</li>
                 <li>Шапки</li>
@@ -73,6 +75,47 @@
             </ul>
           </div>
         </div>
+
+
+        <div class="all wow animate__animated animate__rubberBand">
+          <input checked type="radio" name="respond" id="desktop">
+            <article id="slider">
+                <input checked type="radio" name="slider" id="switch1">
+                <input type="radio" name="slider" id="switch2">
+                <input type="radio" name="slider" id="switch3">
+                <input type="radio" name="slider" id="switch4">
+                <input type="radio" name="slider" id="switch5">
+              <div id="slides">
+                <div id="overflow">
+                  <div class="image">
+                    <article><img src="image/shoes.png"></article>
+                    <article><img src="image/goods/sticker2.png"></article>
+                    <article><img src="image/goods/sticker3.png"></article>
+                    <article><img src="image/goods/sticker4.png"></article>
+                    <article><img src="image/goods/sticker5.png"></article>
+                    <article><img src="image/goods/sticker6.png"></article>
+                    <article><img src="image/shoes.png"></article>
+                  </div>
+                </div>
+              </div>
+              <div id="controls">
+                <label for="switch1"></label>
+                <label for="switch2"></label>
+                <label for="switch3"></label>
+                <label for="switch4"></label>
+                <label for="switch5"></label>
+              </div>
+              <div id="active">
+                <label for="switch1"></label>
+                <label for="switch2"></label>
+                <label for="switch3"></label>
+                <label for="switch4"></label>
+                <label for="switch5"></label>
+              </div>
+            </article>
+        </div>
+
+
         <div class="item_container">
           <div class="Image_text animate__animated animate__backInRight">
             <p>
@@ -102,7 +145,7 @@
           </div>
           <div class="Attributes1 wow animate__animated animate__backInLeft">
             <div class="column1">
-              <img src="image/goods/shoes.png" alt="" />
+              <img src="image/goods/sticker5.png" alt="" />
               <p>210 руб</p>
             </div>
             <div class="column1 scrol-item">
@@ -124,13 +167,13 @@
             </div>
             <div class="column1">
               <img
-                src="image/goods/IMG_7062-removebg-preview-removebg-preview.png"
+                src="image/goods/sticker6.png"
                 alt=""
               />
               <p>210 руб</p>
             </div>
             <div class="column1">
-              <img src="image/goods/IMG_7061-removebg-preview.png" alt="" />
+              <img src="image/goods/sticker4.png" alt="" />
               <p>210 руб</p>
             </div>
           </div>
@@ -141,13 +184,13 @@
             </div>
             <div class="column1">
               <img
-                src="image/goods/IMG_7062-removebg-preview-removebg-preview.png"
+                src="image/goods/sticker2.png"
                 alt=""
               />
               <p>210 руб</p>
             </div>
             <div class="column1">
-              <img src="image/goods/IMG_7061-removebg-preview.png" alt="" />
+              <img src="image/goods/sticker3.png" alt="" />
               <p>210 руб</p>
             </div>
           </div>
@@ -166,6 +209,7 @@
                    широкий выбор обуви, чтобы дополнить ваш образ.<br>
                   </p>
               </p>
+              <p class="number">Наш телефон : +375333448944</p>
             </div>
 
             <div class="Return and exchange">
@@ -188,7 +232,7 @@
               <h2>Соц-сети</h2>
               <ul>
                 <li>
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.instagram.com/shop_skidel_ts?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-instagram"></i></a>
                 </li>
                 <li>
                   <a href="#"><i class="fa-brands fa-viber"></i></a>
@@ -203,5 +247,6 @@
       </div>
     </div>
   </body>
+  <div class="btn-up btn-up_hide"></div>
   <script src="index.js"></script>
 </html>

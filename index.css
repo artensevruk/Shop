@@ -11,10 +11,9 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 300px 100px 100px 300px 400px 800px 200px 1000px  400px ;
+  grid-template-rows: 300px 550px 150px 300px 400px 800px 200px 1000px 440px;
 }
 .header {
-  z-index: 4;
   grid-column: 1/5;
   grid-row: 1/2;
 }
@@ -30,7 +29,7 @@ body {
 .logo {
   color: burlywood;
   display: flex;
-  font-size: calc(8px + 25 * (100vw / 1500));
+  font-size: calc(8px + 19 * (100vw / 1500));
   letter-spacing: 6px;
   margin: 0px 0px 30px 0px;
   align-items: center;
@@ -39,7 +38,7 @@ body {
 .logo2 {
   color: burlywood;
   display: flex;
-  font-size: calc(8px + 16 * (100vw / 1500));
+  font-size: calc(8px + 14 * (100vw / 1500));
   letter-spacing: 6px;
   margin: 0px 0px 20px 0px;
   align-items: center;
@@ -62,7 +61,7 @@ body {
   margin: 0px 30px 0px 0px;
   background-color: antiquewhite;
   height: 5px;
-  animation: shadow1 2s ease infinite;
+  animation: shadow 2s ease infinite;
 }
 
 @keyframes shadow {
@@ -78,8 +77,7 @@ body {
 }
 .Menu ul {
   background-color: rgba(0, 0, 0, 0.795);
-  border-radius: 20px;
-  font-size: calc(4px + 35 * (100vw / 1500));
+  font-size: calc(4px + 27 * (100vw / 1500));
   display: flex;
   gap: 110px;
 
@@ -92,13 +90,25 @@ body {
 .Menu ul li:hover {
   border-block-start: none;
   border-block-end: solid burlywood;
-  font-size: calc(8px + 36 * (100vw / 1500));
   cursor: pointer;
 }
-.Menu2{
+.Menu ul li:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Menu ul li:first-child:hover {
+  border-block-start: none;
+  cursor: pointer;
+}
+.search {
+  border-radius: 30px;
+}
+
+.Menu2 {
   display: none;
 }
-.leave{
+.leave {
   display: none;
   border-color: burlywood;
   z-index: 6;
@@ -108,33 +118,33 @@ body {
   left: 500px;
   transition: 1.2s;
 }
-.leave.activ{
+.leave.activ {
   top: 120px;
 }
-.leave_conteiner{
-  animation :shadow1 4s ease infinite;  
+.leave_conteiner {
+  animation: shadow1 4s ease infinite;
   opacity: 90%;
   border-radius: 40px;
   text-decoration: none;
   color: black;
   padding: 80px;
-font-size: 60px;
-background:rgb(0, 0, 0) ;
+  font-size: 60px;
+  background: rgb(0, 0, 0);
 }
-.leave_conteiner a{
+.leave_conteiner a {
   text-decoration: none;
-  color:aliceblue;
+  color: aliceblue;
 }
-.leave_conteiner ul{
-  padding: 10px; 
+.leave_conteiner ul {
+  padding: 10px;
   list-style-type: none;
 }
-.leave_conteiner ul li{
+.leave_conteiner ul li {
   padding-top: 80px;
-  color:burlywood ;
+  color: burlywood;
 }
-.leave_conteiner ul li :hover{
-  color:burlywood ;
+.leave_conteiner ul li :hover {
+  color: burlywood;
 }
 .container_menu {
   border-radius: 20%;
@@ -180,16 +190,164 @@ background:rgb(0, 0, 0) ;
   padding-right: 32px;
   background-color: black;
 }
+
+.all{
+  grid-column: 1/5;
+  grid-row: 2/3;
+}
+
+#slider { /*положение слайдера*/
+  position: relative;
+  text-align: center;
+  top: 10px;
+}
+
+#slider{ /*центровка слайдера*/
+margin: 0 auto;
+}
+
+#slides article{ /*все изображения справа друг от доруга*/
+width: 13%;
+margin-left: 27px;
+float: left;
+}
+
+#slides .image{ /*устанавливает общий размер блока с изображениями*/
+width: 235%;
+line-height: 0;
+}
+
+#overflow{ /*сркывает все, что находится за пределами этого блока*/
+width: 100%;
+overflow: hidden;
+}
+
+article img{ /*размер изображений слайдера*/
+width: 100%;
+}
+
+#desktop:checked ~ #slider{ /*размер всего слайдера*/
+max-width: 960px; /*максимальнная длинна*/
+}
+
+/*настройка переключения и положения для левой стрелки*/
+/*если свич1-5 активны, то идет обращение к лейблу из блока с id контролс*/
+#switch1:checked ~ #controls label:nth-child(5), 
+#switch2:checked ~ #controls label:nth-child(1),
+#switch3:checked ~ #controls label:nth-child(2),
+#switch4:checked ~ #controls label:nth-child(3),
+#switch5:checked ~ #controls label:nth-child(4){
+background: url('image/left.png') no-repeat; /*заливка фона картинкой без повторений*/
+float: left;
+margin: 0 0 0 -84px; /*сдвиг влево*/
+display: block;
+height: 68px;
+width: 68px;
+}
+
+/*настройка переключения и положения для правой стрелки*/
+#switch1:checked ~ #controls label:nth-child(2), 
+#switch2:checked ~ #controls label:nth-child(3),
+#switch3:checked ~ #controls label:nth-child(4),
+#switch4:checked ~ #controls label:nth-child(5),
+#switch5:checked ~ #controls label:nth-child(1){
+background: url('image/right.png') no-repeat; /*заливка фона картинкой без повторений*/
+float: right;
+margin: 0 -84px 0 0; /*сдвиг вправо*/
+display: block;
+height: 68px;
+width: 68px;
+}
+
+label, a{ /*при наведении на стрелки или переключатели - курсор изменится*/
+cursor: pointer;
+}
+
+.all input{ /*скрывает стандартные инпуты (чекбоксы) на странице*/
+display: none;
+}
+
+/*позиция изображения при активации переключателя*/
+#switch1:checked ~ #slides .image{
+margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image{
+margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image{
+margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image{
+margin-left: -300%;
+}
+
+#switch5:checked ~ #slides .image{
+margin-left: -400%;
+}
+
+#controls{ /*положение блока всех управляющих элементов*/
+margin: -25% 0 0 0;
+width: 100%;
+height: 50px;
+}
+
+#active label{ /*стиль отдельного переключателя*/
+border-radius: 10px; /*скругление углов*/
+display: inline-block; /*расположение в строку*/
+width: 10px;
+height: 10px;
+margin: 10px;
+background: #bbb;
+}
+
+#active{ /*расположение блока с переключателями*/
+margin: 23% 0 0;
+text-align: center;
+}
+
+#active label:hover{ /*поведение чекбокса при наведении*/
+background: burlywood;
+border-color: #777 !important; /*выполнение в любом случае*/
+}
+
+/*цвет активного лейбла при активации чекбокса*/
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch4:checked ~ #active label:nth-child(4),
+#switch5:checked ~ #active label:nth-child(5){
+background: burlywood;
+border-color: burlywood!important;
+}
+
+#slides .image{ /*анимация пролистывания изображений*/
+transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#controls label:hover{ /*прозрачность стрелок при наведении*/
+opacity: 0.6;
+}
+
+#controls label{ /*прозрачность стрелок при отводе курсора*/
+transition: opacity 0.2s ease-out;
+}
+
+
+
 .item_container {
+  z-index: 5;
   padding-left: 20px;
   padding-top: 30px;
   padding-right: 30px;
-  background-color: rgb(47, 43, 43);
+  background-color: rgba(47, 43, 43, 0.722);
   justify-content: center;
   margin-left: 20px;
   margin-right: 20px;
   grid-column: 1/5;
-  grid-row: 2/5;
+  grid-row: 3/5;
 }
 .Image_text {
   gap: 60px;
@@ -223,26 +381,26 @@ background:rgb(0, 0, 0) ;
   max-width: 100%;
   display: none;
 }
-.Image_text img:hover{
-  border: 1px solid white ;
+.Image_text img:hover {
+  border: 1px solid white;
   transform: scale(1.1);
   cursor: pointer;
 }
-.Scroll{
+.Scroll {
   background-color: aliceblue;
   height: 200px;
   width: 200px;
 }
-.Title{
+.Title {
   color: white;
   text-align: center;
   font-size: 45px;
 }
-.Catalog{
-grid-column: 1/5;
-grid-row: 5/7 ;
+.Catalog {
+  grid-column: 1/5;
+  grid-row: 5/7;
 }
-.Attributes1{
+.Attributes1 {
   padding-top: 160px;
   align-items: start;
   display: flex;
@@ -250,29 +408,28 @@ grid-row: 5/7 ;
   gap: 20px;
   justify-content: space-between;
 }
-.column1 p{
+.column1 p {
   text-align: center;
-  color:burlywood ;
+  color: burlywood;
   font-size: 28px;
 }
-.column1 img:hover{
+.column1 img:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
-.basement{
+.basement {
   box-shadow: 0px 0px 68px burlywood;
   grid-column: 1/5;
   grid-row: 9/10;
-background-color: burlywood;
+  background-color: burlywood;
 }
-.info{
+.info {
   margin: 20px;
   justify-content: center;
   gap: 140px;
-  display: flex
+  display: flex;
 }
 .Contact {
- 
 }
 .Contact ul {
   text-align: center;
@@ -280,10 +437,12 @@ background-color: burlywood;
   color: aliceblue;
   font-size: calc(20px + 30 * (100vw / 1500));
 }
-.Contact ul li a i:hover{
+.Contact ul li a i:hover {
   transform: scale(1.3);
 }
-.Contact ul i{color: aliceblue;}
+.Contact ul i {
+  color: aliceblue;
+}
 @media (max-width: 1400px) {
   .Image_text img {
     animation: shadow1 5s ease infinite;
@@ -296,11 +455,26 @@ background-color: burlywood;
     width: 300px !important;
   }
 }
+.number {
+  margin-top: 50px;
+  font-size: 16px;
+  color: black;
+  animation: color-change 2s ease infinite;
+}
+
+@keyframes color-change {
+  50% {
+    color: rgb(255, 255, 255);
+  }
+  80% {
+    color: black;
+  }
+}
 @media (max-width: 1020px) {
   .container {
     display: grid;
     grid-template-columns: repeat(4, 300px);
-    grid-template-rows: 500px 700px 500px 500px;
+    grid-template-rows: 500px 700px 900px 800px;
     text-align: center;
   }
   .Image_text img {
@@ -325,7 +499,7 @@ background-color: burlywood;
   }
 }
 @media (max-width: 890px) {
-  .leave{
+  .leave {
     display: inline;
     border-color: burlywood;
     z-index: 6;
@@ -366,4 +540,27 @@ background-color: burlywood;
     color: white;
     font-size: 50px;
   }
+}
+
+.btn-up {
+  z-index: 9;
+  position: fixed;
+  background-color: burlywood;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 22px;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+
+.btn-up::before {
+  content: "";
+  text-align: center;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 12px;
+  top: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 17V4M3 10l7-7 7 7'/%3E%3C/g%3E%3C/svg%3E");
 }
