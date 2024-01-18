@@ -8,9 +8,9 @@
     },
     {
       "id": 2,
-      "name": "Джинсы",
-      "price": 50.00,
-      "image": "джинсы.jpg"
+      "name": "Кроссовки",
+      "price": 220,
+      "image": "image/sticker3.png"
     },
     {
       "id": 3,

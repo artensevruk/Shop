@@ -1,3 +1,11 @@
+import data from '../Catalog.json'
+
+
+const goods = data;
+
+console.log(goods)
+console.log(goods.products[1].name);
+
 export const Catalog = () => {
   return (
     <div className="Catalog">
