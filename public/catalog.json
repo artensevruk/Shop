@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Кроссовки",
+      "price": 210,
+      "image": "image/goods/shoes.png"
+    },
+    {
+      "id": 2,
+      "name": "Джинсы",
+      "price": 50.00,
+      "image": "джинсы.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Кроссовки",
+      "price": 80.00,
+      "image": "кроссовки.jpg"
+    }
+  ]
+}
