@@ -1,10 +1,19 @@
-import data from '../Catalog.json'
-
+import data from "../Catalog.json";
 
 const goods = data;
 
-console.log(goods)
-console.log(goods.products[1].name);
+console.log(goods);
+console.log(goods[1].name);
+
+const listItems = goods.map((product) => (
+  <div key={product.id} className="column1 scrol-item">
+    <img src={product.image} alt="" />
+    <p>{product.name}</p>
+    <p>{product.price}</p>
+    <p>Размеры : {product.sizes}</p>
+    <button>Приобрести</button>
+  </div>
+));
 
 export const Catalog = () => {
   return (
@@ -12,70 +21,10 @@ export const Catalog = () => {
       <div className="Title">
         <h1>Каталог</h1>
       </div>
-      <div className="Attributes1 wow animate__animated animate__backInLeft">
-        <div className="column1">
-          <img src="image/goods/shoes.png" alt="" />
-          <p>210 руб</p>
-          <p>Размеры : 31 </p>
-          <button>Приобрести</button>
-        </div>
-        <div className="column1 scrol-item">
-          <img
-            src="image/goods/shoes.png"
-            alt=""
-          />
-          <p>210 руб</p>
-          <p>Размеры : 32 , 33 ,43 ,44</p>
-          <button>Приобрести</button>
-        </div>
-        <div className="column1 scrol-item">
-          <img src="image/goods/shoes.png" alt="" />
-          <p>210 руб</p>
-          <p>Размеры : 31 , 32 , 33</p>
-          <button>Приобрести</button>
-        </div>
+
+      <div className="container_products">
+        {listItems}
       </div>
-      <div className="Attributes1 wow animate__animated animate__backInRight">
-        <div className="column1">
-          <img src="image/goods/shoes.png" alt="" />
-          <p>210 руб</p>
-          <p>Размеры : 31 , 33</p>
-          <button>Приобрести</button>
-        </div>
-        <div className="column1">
-          <img src="image/goods/shoes.png" alt="" />
-          <p>210 руб</p>
-          <p>Размеры : 31 , 32 , 33 , 39</p>
-          <button>Приобрести</button>
-        </div>
-        <div className="column1">
-          <img src="image/goods/shoes.png" alt="" />
-          <p>210 руб</p>
-          <p>Размеры : 35 , 36 , 37 ,38 </p>
-          <button>Приобрести</button>
-        </div>
-      </div>
-      <div className="Attributes1 wow animate__animated animate__backInLeft">
-        <div className="column1">
-          <img src="image/goods/shoes.png" alt="" />
-          <p>210 руб</p>
-          <p>Размеры : 40 ,43</p>
-          <button>Приобрести</button>
-        </div>
-        <div className="column1">
-          <img src="image/goods/shoes.png" alt="" />
-          <p>210 руб</p>
-          <p>Размеры : 45</p>
-          <button>Приобрести</button>
-        </div>
-        <div className="column1">
-          <img src="image/goods/shoes.png" alt="" />
-          <p>210 руб</p>
-          <p>Размеры : нету размеров</p>
-          <button>Приобрести</button>
-        </div>
-      </div>
-      
     </div>
   );
 };
