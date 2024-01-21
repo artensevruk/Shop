@@ -4,21 +4,21 @@
       "id": 1,
       "name": "Кроссовки",
       "price": 210,
-      "image": "image/goods/shoes.png",
+      "image": "https://nurhyapcmzrktzgjfoqp.supabase.co/storage/v1/object/public/ProductImages/shoes.png",
       "sizes": "41 , 39 ,38"
     },
     {
       "id": 2,
       "name": "Кроссовки",
       "price": 220,
-      "image": "image/sticker3.png",
+      "image": "https://nurhyapcmzrktzgjfoqp.supabase.co/storage/v1/object/public/ProductImages/shoes.png",
       "sizes": "41 , 40 ,38"
     },
     {
       "id": 3,
       "name": "Кроссовки",
       "price": 80.00,
-      "image": "image/sticker3.png",
+      "image": "https://nurhyapcmzrktzgjfoqp.supabase.co/storage/v1/object/public/ProductImages/shoes.png",
       "sizes": "41 , 39 ,38"
     }
   ]
