@@ -248,13 +248,13 @@ grid-row: 5/7 ;
   justify-content: center;
 }
 
-.column1 p{
+.model p{
   text-align: center;
   color:burlywood ;
   font-size: 28px;
   padding: 20px;
 }
-.column1 img:hover{
+.model img:hover{
   transform: scale(1.2);
   cursor: pointer;
 }
@@ -270,9 +270,7 @@ background-color: burlywood;
   gap: 140px;
   display: flex
 }
-.Contact {
- 
-}
+
 .Contact ul {
   text-align: center;
   list-style-type: none;
