@@ -248,6 +248,9 @@ grid-row: 5/7 ;
   justify-content: center;
 }
 
+.model{
+  text-align: center;
+}
 .model p{
   text-align: center;
   color:burlywood ;
@@ -258,6 +261,25 @@ grid-row: 5/7 ;
   transform: scale(1.2);
   cursor: pointer;
 }
+
+.send{
+ padding-left: 15px;
+ padding-right: 15px;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ background-color: burlywood  ;
+ color: aliceblue;
+ font-family: Oswald;
+ border-radius: 20px;
+ animation: shadow1 2s ease infinite;
+ cursor: pointer;
+}
+.send:hover{
+  cursor: pointer;
+  background-color:  aliceblue ;
+  color: burlywood;
+}
+
 .basement{
   box-shadow: 0px 0px 68px burlywood;
   grid-column: 1/5;

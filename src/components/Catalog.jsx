@@ -6,7 +6,7 @@ const listItems = goods.map((product) => (
     <p>{product.name}</p>
     <p>{product.price}</p>
     <p>Размеры: {product.sizes}</p>
-    <button>Приобрести</button>
+    <button className="send">Приобрести</button>
   </div>
 ));
 
