@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export const Header = () => {
   return (
     <div className="header">
@@ -18,7 +20,7 @@ export const Header = () => {
             <li>Куртки</li>
             <li>Шапки</li>
             <li>
-              <i className="fa-solid fa-user" />
+            <NavLink to = "/login" ><i className="fa-solid fa-user" /></NavLink>
             </li>
             <li>
               <i className="fa-solid fa-cart-shopping" />
