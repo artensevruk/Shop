@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import { Login } from "./components/Login";
 import { Catalog } from "./components/Catalog";
+import { ItemContainer } from "./components/ItemContainer";
 
 const router = createBrowserRouter(
   [
@@ -17,9 +18,10 @@ const router = createBrowserRouter(
           path: "login",
           element: <Login />,
         },
+      
         {
           path: "",
-          element: <Catalog />,
+          element: <><Catalog /><ItemContainer /></> 
         },
       ],
     },
