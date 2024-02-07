@@ -1,13 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import reportWebVitals from "./reportWebVitals";
+import { Login } from "./components/Login";
+import { Catalog } from "./components/Catalog";
+import { ItemContainer } from "./components/ItemContainer";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const router = createBrowserRouter(
+  [
+  {
+      path: "/",
+      element: <App />,
+      children: [
+        {
+          path: "login",
+          element: <Login />,
+        },
+      
+        {
+          path: "",
+          element: <><Catalog /><ItemContainer /></> 
+        },
+      ],
+    },
+    
+  ]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
