@@ -4,7 +4,6 @@
 body {
   background-color: black;
   max-width: 1900px;
-  height: 3000px;
   margin: 0;
   font-family: Oswald;
   color: white;
@@ -12,7 +11,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 300px 100px 100px 300px 400px 800px 200px 1000px  400px ;
+  grid-row: 100px;
 }
 .header {
   z-index: 4;
@@ -28,10 +27,39 @@ body {
   align-items: start;
   position: fixed;
 }
+.registration {
+  text-align: center;
+  justify-content: center;
+  grid-column: 1/5;
+  grid-row: 2/5;
+}
+
+.registration form input {
+  margin: 10px;
+  padding: 20px 120px 20px 120px;
+  text-align: center;
+  border-radius: 20px;
+  border: 4px solid burlywood;
+  animation: shadow1 2s ease infinite;
+
+  font-family: Oswald;
+}
+.registration form button {
+  margin: 10px;
+  padding: 20px 120px 20px 120px;
+  text-align: center;
+  padding: 15px 40px 15px 40px;
+  background-color: burlywood;
+  color: aliceblue;
+  font-family: Oswald;
+  border-radius: 20px;
+  animation: shadow1 2s ease infinite;
+  cursor: pointer;
+}
 .logo {
   color: burlywood;
   display: flex;
-  font-size: calc(8px + 25 * (100vw / 1500));
+  font-size: calc(8px + 20 * (100vw / 1500));
   letter-spacing: 6px;
   margin: 0px 0px 30px 0px;
   align-items: center;
@@ -80,7 +108,7 @@ body {
 .Menu ul {
   background-color: rgba(0, 0, 0, 0.795);
   border-radius: 20px;
-  font-size: calc(4px + 35 * (100vw / 1500));
+  font-size: calc(4px + 26 * (100vw / 1500));
   display: flex;
   gap: 110px;
 
@@ -93,13 +121,13 @@ body {
 .Menu ul li:hover {
   border-block-start: none;
   border-block-end: solid burlywood;
-  font-size: calc(8px + 36 * (100vw / 1500));
+  font-size: calc(8px + 27 * (100vw / 1500));
   cursor: pointer;
 }
-.Menu2{
+.Menu2 {
   display: none;
 }
-.leave{
+.leave {
   display: none;
   border-color: burlywood;
   z-index: 6;
@@ -109,33 +137,33 @@ body {
   left: 500px;
   transition: 1.2s;
 }
-.leave.activ{
+.leave.activ {
   top: 120px;
 }
-.leave_conteiner{
-  animation :shadow1 4s ease infinite;  
+.leave_conteiner {
+  animation: shadow1 4s ease infinite;
   opacity: 90%;
   border-radius: 40px;
   text-decoration: none;
   color: black;
   padding: 80px;
-font-size: 60px;
-background:rgb(0, 0, 0) ;
+  font-size: 60px;
+  background: rgb(0, 0, 0);
 }
-.leave_conteiner a{
+.leave_conteiner a {
   text-decoration: none;
-  color:aliceblue;
+  color: aliceblue;
 }
-.leave_conteiner ul{
-  padding: 10px; 
+.leave_conteiner ul {
+  padding: 10px;
   list-style-type: none;
 }
-.leave_conteiner ul li{
+.leave_conteiner ul li {
   padding-top: 80px;
-  color:burlywood ;
+  color: burlywood;
 }
-.leave_conteiner ul li :hover{
-  color:burlywood ;
+.leave_conteiner ul li :hover {
+  color: burlywood;
 }
 .container_menu {
   border-radius: 20%;
@@ -224,77 +252,75 @@ background:rgb(0, 0, 0) ;
   max-width: 100%;
   display: none;
 }
-.Image_text img:hover{
-  border: 1px solid white ;
+.Image_text img:hover {
+  border: 1px solid white;
   transform: scale(1.1);
   cursor: pointer;
 }
-.Scroll{
+.Scroll {
   background-color: aliceblue;
   height: 200px;
   width: 200px;
 }
-.Title{
+.Title {
   color: white;
   text-align: center;
   font-size: 45px;
 }
-.Catalog{
-grid-column: 1/5;
-grid-row: 5/7 ;
+.Catalog {
+  grid-column: 1/5;
+  grid-row: 5/7;
 }
-.container_products{
+.container_products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.model{
+.model {
   text-align: center;
 }
-.model p{
+.model p {
   text-align: center;
-  color:burlywood ;
+  color: burlywood;
   font-size: 28px;
   padding: 20px;
 }
-.model img:hover{
+.model img:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
 
-.send{
- padding-left: 15px;
- padding-right: 15px;
- padding-top: 10px;
- padding-bottom: 10px;
- background-color: burlywood  ;
- color: aliceblue;
- font-family: Oswald;
- border-radius: 20px;
- animation: shadow1 2s ease infinite;
- cursor: pointer;
-}
-.send:hover{
+.send {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: burlywood;
+  color: aliceblue;
+  font-family: Oswald;
+  border-radius: 20px;
+  animation: shadow1 2s ease infinite;
   cursor: pointer;
-  background-color:  aliceblue ;
+}
+.send:hover {
+  cursor: pointer;
+  background-color: aliceblue;
   color: burlywood;
 }
 
-.basement{
+.basement {
   box-shadow: 0px 0px 68px burlywood;
   grid-column: 1/5;
   grid-row: 9/10;
-background-color: burlywood;
+  background-color: burlywood;
 }
 
-
-
-.info{
+.info {
   margin: 20px;
   justify-content: center;
   gap: 140px;
-  display: flex
+  display: flex;
 }
 
 .Contact ul {
@@ -303,10 +329,12 @@ background-color: burlywood;
   color: aliceblue;
   font-size: calc(20px + 30 * (100vw / 1500));
 }
-.Contact ul li a i:hover{
+.Contact ul li a i:hover {
   transform: scale(1.3);
 }
-.Contact ul i{color: aliceblue;}
+.Contact ul i {
+  color: aliceblue;
+}
 @media (max-width: 1400px) {
   .Image_text img {
     animation: shadow1 5s ease infinite;
@@ -348,7 +376,7 @@ background-color: burlywood;
   }
 }
 @media (max-width: 890px) {
-  .leave{
+  .leave {
     display: inline;
     border-color: burlywood;
     z-index: 6;
@@ -385,6 +413,7 @@ background-color: burlywood;
     padding-right: 100px;
     display: none;
   }
+
   .Image_text p {
     color: white;
     font-size: 50px;

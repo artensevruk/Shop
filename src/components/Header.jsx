@@ -6,9 +6,9 @@ export const Header = () => {
       <div className="header_container  wow animate__animated animate__pulse">
         <div className="logo">
           <h1>
-            Sneakers and
+            SeV.
             <br />
-            Clothes
+            .TaT
           </h1>
         </div>
         <div className="Menu">
