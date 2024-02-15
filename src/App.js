@@ -5,17 +5,24 @@ import {ItemContainer} from "./components/ItemContainer"
 import {Catalog} from "./components/Catalog"
 import {Basement} from "./components/Basement"
 import { Outlet } from 'react-router-dom';
-
+import { getData } from './getData';
+import {
+  QueryClient,
+  QueryClientProvider
+} from 'react-query';
+const queryClient = new QueryClient();
 
 
 function App() {
   return (
+    <QueryClientProvider client={queryClient}>
     <div className="container">
       <Header />
       <Outlet />
       <Basement />
     </div>
+    </QueryClientProvider>
   );
 }
-
+getData()
 export default App;

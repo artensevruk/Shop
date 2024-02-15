@@ -1,10 +1,12 @@
 import  Express  from "express";
-const port = 3000;
+import {server} from "./dataBase.js";
+import cors from 'cors';
+const port = 8081;
 const app = Express();
+app.use(cors());
 
-// respond with "hello world" when a GET request is made to the homepage
 app.get('/products', function(req, res) {
-  res.send('hello world');
+ server().then((data) => res.send(data[0]))
 });
 
 app.listen(port, () => {

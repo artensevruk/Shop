@@ -6,9 +6,12 @@ const connection = await mysql.createConnection(
 
 const sql = 'SELECT * FROM `products`';
 
-const [rows, fields] = await connection.query(sql);
+export const server = () =>{
+  return connection.query(sql);
+}
 
-console.log(rows);
-console.log(fields);
+
+
+console.log(server);
 
 
