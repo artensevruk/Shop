@@ -1,12 +1,16 @@
 import  Express  from "express";
-import {server} from "./dataBase.js";
 import cors from 'cors';
+import { Product } from "./productModel.js";
+
+
+
 const port = 8081;
 const app = Express();
 app.use(cors());
 
-app.get('/products', function(req, res) {
- server().then((data) => res.send(data[0]))
+app.get('/products', async function(req, res) {
+  const result = await Product.findAll({raw : true})
+  res.send(result)
 });
 
 app.listen(port, () => {
