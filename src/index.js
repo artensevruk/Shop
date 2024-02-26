@@ -4,9 +4,10 @@ import "./index.css";
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
-import { Login } from "./components/Login";
+import { Registration } from "./components/Registration";
 import { Catalog } from "./components/Catalog";
 import { ItemContainer } from "./components/ItemContainer";
+import { Entrance } from "./components/Entrance";
 
 const router = createBrowserRouter(
   [
@@ -15,8 +16,8 @@ const router = createBrowserRouter(
       element: <App />,
       children: [
         {
-          path: "login",
-          element: <Login />,
+          path: "registration",
+          element: <Registration />,
         },
       
         {
@@ -28,10 +29,40 @@ const router = createBrowserRouter(
     
   ]);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  );
+
+
+  const router2 = createBrowserRouter(
+    [
+    {
+        path: "/",
+        element: <App />,
+        children: [
+          {
+            path: "entrance",
+            element: <Entrance />,
+          },
+        
+          {
+            path: "",
+            element: <><Catalog /><ItemContainer /></> 
+          },
+        ],
+      },
+      
+    ]);
+
+
+
+const root2 = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router2} />
   </React.StrictMode>
 );
 

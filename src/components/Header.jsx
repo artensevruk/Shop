@@ -16,11 +16,12 @@ export const Header = () => {
             <li>
               <input className="search" placeholder="поиск..." />
             </li>
-            <li>Кросовки</li>
+            <li>Кросcовки</li>
             <li>Куртки</li>
             <li>Шапки</li>
             <li>
-            <NavLink to = "/login" ><i className="fa-solid fa-user" /></NavLink>
+            <NavLink to = "/registration" ><i className="fa-solid fa-user" /></NavLink>
+            <NavLink to = "/entrance" ><i className="fa-solid fa-user" /></NavLink>
             </li>
             <li>
               <i className="fa-solid fa-cart-shopping" />

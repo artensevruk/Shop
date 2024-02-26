@@ -1,4 +1,4 @@
-export const Login = () =>{
+export const Registration = () =>{
   return (
    
       <div className="registration">

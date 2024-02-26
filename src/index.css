@@ -56,6 +56,12 @@ body {
   animation: shadow1 2s ease infinite;
   cursor: pointer;
 }
+.registration form button:hover {
+  
+  background-color: aliceblue;
+  color:  burlywood;
+  
+}
 .logo {
   color: burlywood;
   display: flex;
@@ -228,8 +234,11 @@ body {
   align-items: center;
 }
 .Image_text p {
+  border-radius: 30%;
+  border: 0px solid;
   color: white;
-  font-size: calc(10px + 15 * (100vw / 1500));
+  font-size: calc(4px + 15 * (100vw / 1500));
+  margin: 80px;
 }
 .Image_text img {
   animation: shadow1 5s ease infinite;
@@ -237,8 +246,9 @@ body {
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 50px;
+  margin-right: 130px;
   border-radius: 30%;
-  border: 2px solid;
+  border: 0px solid;
   width: 100%;
 }
 .shoes img {
@@ -377,6 +387,41 @@ body {
     max-width: 100%;
     display: block;
   }
+}
+.entrance{
+  text-align: center;
+  justify-content: center;
+  grid-column: 1/5;
+  grid-row: 2/5;
+  padding-bottom: 150px;
+}
+.entrance form input {
+  margin: 10px;
+  padding: 20px 120px 20px 120px;
+  text-align: center;
+  border-radius: 20px;
+  border: 4px solid burlywood;
+  animation: shadow1 2s ease infinite;
+
+  font-family: Oswald;
+}
+.entrance form button {
+  margin: 10px;
+  padding: 20px 120px 20px 120px;
+  text-align: center;
+  padding: 15px 40px 15px 40px;
+  background-color: burlywood;
+  color: aliceblue;
+  font-family: Oswald;
+  border-radius: 20px;
+  animation: shadow1 2s ease infinite;
+  cursor: pointer;
+}
+.entrance form button:hover {
+  
+  background-color: aliceblue;
+  color:  burlywood;
+  
 }
 @media (max-width: 890px) {
   .leave {
