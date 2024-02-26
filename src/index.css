@@ -108,6 +108,7 @@ body {
 .Menu ul {
   background-color: rgba(0, 0, 0, 0.795);
   border-radius: 20px;
+
   font-size: calc(4px + 26 * (100vw / 1500));
   display: flex;
   gap: 110px;
@@ -276,6 +277,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 10%;
 }
 
 .model {
@@ -285,7 +287,7 @@ body {
   text-align: center;
   color: burlywood;
   font-size: 28px;
-  padding: 20px;
+  
 }
 .model img:hover {
   transform: scale(1.2);

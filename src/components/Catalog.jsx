@@ -9,7 +9,7 @@ export const ElementCatalog = ({ product }) => {
     <div className="model scroll-item">
       <img src={product.image} alt="" />
       <p>{product.name}</p>
-      <p>{product.price}</p>
+      <p> Цена :{product.price}</p>
       <p>Размеры: {product.sizes}</p>
       <button className="send">Приобрести</button>
     </div>
