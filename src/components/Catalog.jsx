@@ -5,13 +5,28 @@ import {useQuery} from 'react-query'
 
 
 export const ElementCatalog = ({ product }) => {
+
+  const addBasket = () =>{
+    fetch('http://localhost:8081/carts', {
+    method: 'POST', // Здесь так же могут быть GET, PUT, DELETE
+    body: JSON.stringify(product), // Тело запроса в JSON-формате
+    headers: {
+      // Добавляем необходимые заголовки
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then(() => console.log("Hello"))
+  }
+
+
+
   return (
     <div className="model scroll-item">
       <img src={product.image} alt="" />
       <p>{product.name}</p>
       <p> Цена :{product.price}</p>
       <p>Размеры: {product.sizes}</p>
-      <button className="send">Добавить в корзину</button>
+      <button onClick={addBasket} className="send">Добавить в корзину</button>
     </div>
   );
 };

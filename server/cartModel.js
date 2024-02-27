@@ -1,37 +1,27 @@
 import { Sequelize , DataTypes, INTEGER, DECIMAL } from "sequelize";
 import { sequelize } from "./connectDatabase.js";
+import { Product } from "./productModel.js";
 
-export const Product = sequelize.define('product', {
+export const CartProduct = sequelize.define('cartProduct', {
   // Model attributes are defined here
   id: {
     type: DataTypes.INTEGER.UNSIGNED,
     autoIncrement: true,
     primaryKey: true
   },
-  name: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
-  price: {
-    type: DataTypes.DECIMAL(10 , 2),
-    allowNull: false
-  },
-  image: {
-    type: DataTypes.STRING,
+  quantity: {
+    type: DataTypes.INTEGER,
+    defaultValue: 1,
     allowNull: false
   }
 }, {
-  timestamps: false
+  timestamps: false,
+  
   // Other model options go here
 }); 
 
+CartProduct.belongsTo(Product)
 
 
 
 
-
-
- sequelize.sync({alter:true})
-
-  
-  
