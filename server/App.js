@@ -2,7 +2,7 @@ import  Express  from "express";
 import cors from 'cors';
 import { Product } from "./productModel.js";
 // import { Size } from "./productModel.js";
-
+// import { Basket } from "./productModel.js";
 
 const port = 8081;
 const app = Express();
@@ -15,6 +15,11 @@ app.get('/products', async function(req, res) {
 
 // app.get('/size', async function(req, res) {
 //   const result = await Size.findAll({raw : true})
+//   res.send(result)
+// });
+
+// app.get('/basket', async function(req, res) {
+//   const result = await Basket.findAll({raw : true})
 //   res.send(result)
 // });
 

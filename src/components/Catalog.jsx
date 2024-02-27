@@ -11,7 +11,7 @@ export const ElementCatalog = ({ product }) => {
       <p>{product.name}</p>
       <p> Цена :{product.price}</p>
       <p>Размеры: {product.sizes}</p>
-      <button className="send">Приобрести</button>
+      <button className="send">Добавить в корзину</button>
     </div>
   );
 };

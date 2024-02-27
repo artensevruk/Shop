@@ -24,7 +24,7 @@ export const Header = () => {
             <NavLink to = "/entrance" ><i className="fa-solid fa-user" /></NavLink>
             </li>
             <li>
-              <i className="fa-solid fa-cart-shopping" />
+            <NavLink to = "/basket" ><i className="fa-solid fa-cart-shopping" /></NavLink>
             </li>
           </ul>
         </div>

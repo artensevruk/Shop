@@ -1,7 +1,7 @@
 import { Sequelize , DataTypes, INTEGER, DECIMAL } from "sequelize";
 import { sequelize } from "./connectDatabase.js";
 
-export const Product = sequelize.define('product', {
+export const Product =await sequelize.define('product', {
   // Model attributes are defined here
   id: {
     type: DataTypes.INTEGER.UNSIGNED,
@@ -32,10 +32,7 @@ export const Product = sequelize.define('product', {
 //     autoIncrement: true,
 //     primaryKey: true
 //   },
-//   name: {
-//     type: DataTypes.STRING,
-//     allowNull: false
-//   },
+  
 //   size: {
 //     type: DataTypes.INTEGER,
 //     allowNull: false
@@ -45,7 +42,53 @@ export const Product = sequelize.define('product', {
 //   // Other model options go here
 // }); 
 
-  sequelize.sync({alter:true})
+
+// export const Basket = await sequelize.define('basket', {
+//   // Model attributes are defined here
+//   id: {
+//     type: DataTypes.INTEGER.UNSIGNED,
+//     autoIncrement: true,
+//     primaryKey: true
+//   },
+//   name: {
+//     type: DataTypes.STRING,
+//     allowNull: false
+//   },
+//   price: {
+//     type: DataTypes.DECIMAL(10 , 2),
+//     allowNull: false
+//   },
+//   image: {
+//     type: DataTypes.STRING,
+//     allowNull: false
+//   },
+//   size: {
+//         type: DataTypes.INTEGER,
+//         allowNull: false
+//       },
+//   quantity: {
+//     type: DataTypes.INTEGER.UNSIGNED,
+//     allowNull: false
+//   }
+  
+// }, {
+//   timestamps: false
+//   // Other model options go here
+// }); 
+
+
+
+ sequelize.sync({alter:true})
+
+  
+  // const captains = await Basket.bulkCreate([
+  //   { name: 'Кроссовки' ,
+  //     size: 38
+  // },
+  //   { name: 'Туфли',
+  //     size: 89
+  // }
+  // ]);
 
 // const captains = await Product.bulkCreate([
 //   { name: 'Кроссовки' ,
