@@ -20,12 +20,16 @@ const router = createBrowserRouter(
           path: "registration",
           element: <Registration />,
         },
-      
+        {
+          path: "basket",
+          element: <Basket />
+        },
         {
           path: "",
           element: <><Catalog /><ItemContainer /></> 
-        },
+        }
       ],
+      
     },
     
   ]);
@@ -34,64 +38,6 @@ const router = createBrowserRouter(
   root.render(
     <React.StrictMode>
       <RouterProvider router={router} />
-    </React.StrictMode>
-  );
-
-
-//   const router2 = createBrowserRouter(
-//     [
-//     {
-//         path: "/",
-//         element: <App />,
-//         children: [
-//           {
-//             path: "entrance",
-//             element: <Entrance />,
-//           },
-        
-//           {
-//             path: "",
-//             element: <><Catalog /><ItemContainer /></> 
-//           },
-//         ],
-//       },
-      
-//     ]);
-
-
-
-// const root2 = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(
-//   <React.StrictMode>
-//     <RouterProvider router={router2} />
-//   </React.StrictMode>
-// );
-
-
-const router3 = createBrowserRouter(
-  [
-  {
-      path: "/",
-      element: <App />,
-      children: [
-        {
-          path: "basket",
-          element: <Basket />,
-        },
-      
-        {
-          path: "",
-          element: <><Catalog /><ItemContainer /></> 
-        },
-      ],
-    },
-    
-  ]);
-
-  const root3 = ReactDOM.createRoot(document.getElementById("root"));
-  root.render(
-    <React.StrictMode>
-      <RouterProvider router={router3} />
     </React.StrictMode>
   );
 
