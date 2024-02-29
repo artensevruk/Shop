@@ -21,7 +21,6 @@ export const Header = () => {
             <li>Шапки</li>
             <li>
             <NavLink to = "/registration" ><i className="fa-solid fa-user" /></NavLink>
-            <NavLink to = "/entrance" ><i className="fa-solid fa-user" /></NavLink>
             </li>
             <li>
             <NavLink to = "/basket" ><i className="fa-solid fa-cart-shopping" /></NavLink>

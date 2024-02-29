@@ -11,7 +11,16 @@ export const server = () =>{
 }
 
 
+const sqlBasket = 'SELECT * FROM `cartProduct`';
 
+export const serverToBasket = () =>{
+  return connection.query(sqlBasket);
+}
+
+
+console.log(serverToBasket);
 console.log(server);
+
+
 
 

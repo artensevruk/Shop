@@ -5,6 +5,7 @@ import {ItemContainer} from "./components/ItemContainer"
 import {Catalog} from "./components/Catalog"
 import {Basement} from "./components/Basement"
 import { Outlet } from 'react-router-dom';
+import { getDataBasket } from './getDataBasket';
 import { getData } from './getData';
 import {
   QueryClient,
@@ -24,5 +25,8 @@ function App() {
     </QueryClientProvider>
   );
 }
+
+
+getDataBasket();
 getData()
 export default App;

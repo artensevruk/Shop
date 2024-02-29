@@ -45,7 +45,14 @@ body {
 .basket h1{
   font-size: calc(5px + 60 * (100vw / 1500));
 }
-
+.basket{
+  text-align: center;
+}
+.title{
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 .registration form input {
   margin: 10px;
   padding: 20px 120px 20px 120px;

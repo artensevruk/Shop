@@ -16,9 +16,18 @@ app.get("/products", async function (req, res) {
   res.send(result);
 });
 
-app.get("/carts", async function (req, res) {
-  const result = await CartProduct.findAll({ raw: true });
+app.get("/cartProduct", async function (req, res) {
+  const result = await CartProduct.findAll({ include: [Product] });
   res.send(result);
+});
+
+app.delete("/cartProduct/:id" , async function(req , res){
+ CartProduct.destroy({
+  where:{
+    id: req.params.id
+  }
+})
+res.end()
 });
 
 app.post("/carts", async function (req, res) {
