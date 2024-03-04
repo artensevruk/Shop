@@ -17,7 +17,6 @@ const ElementBasket = ({ productBasket }) => {
 
   const mutation = useMutation(deleteBasket, {
     onSuccess: () => { 
-      debugger
       queryClient.refetchQueries("productBasket");
     },
   });

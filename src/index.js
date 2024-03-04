@@ -25,7 +25,7 @@ const router = createBrowserRouter(
           element: <Basket />
         },
         {
-          path: "",
+          path: "home",
           element: <><Catalog /><ItemContainer /></> 
         }
       ],

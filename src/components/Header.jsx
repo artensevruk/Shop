@@ -14,6 +14,9 @@ export const Header = () => {
         <div className="Menu">
           <ul>
             <li>
+            <NavLink to = "/home" > <i class="fa-solid fa-house"></i></NavLink>
+            </li>
+            <li>
               <input className="search" placeholder="поиск..." />
             </li>
             <li>Кросcовки</li>
