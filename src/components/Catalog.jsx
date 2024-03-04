@@ -25,7 +25,16 @@ export const ElementCatalog = ({ product }) => {
       <img src={product.image} alt="" />
       <p>{product.name}</p>
       <p> Цена :{product.price}</p>
-      <p>Размеры: {product.sizes}</p>
+     <p>
+      Размер :
+      {product.sizes.map((element) =>  <option key={product.id} defaultValue={product.id}>{element.size}</option>)}
+      </p>
+      <div>
+      <select className="select">
+      Цвета :
+      {product.colors.map((element) =>  <option key={product.id} defaultValue={product.id}>{element.color}</option>)}
+      </select>
+      </div>
       <button onClick={addBasket} className="send">Добавить в корзину</button>
     </div>
   );

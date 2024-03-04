@@ -2,15 +2,15 @@ import { Sequelize , DataTypes, INTEGER, DECIMAL } from "sequelize";
 import { sequelize } from "./connectDatabase.js";
 import { Product } from "./productModel.js";
 
-export const  Size =   sequelize.define('size', {
+export const  Categories = sequelize.define('categories', {
   // Model attributes are defined here
   id: {
     type: DataTypes.INTEGER.UNSIGNED,
     autoIncrement: true,
     primaryKey: true
   },
-  size: {
-    type: DataTypes.INTEGER,
+  categories: {
+    type: DataTypes.STRING,
     allowNull: false
   }
 }, {
@@ -19,43 +19,42 @@ export const  Size =   sequelize.define('size', {
   // Other model options go here
 }); 
 
- Product.hasMany(Size)
-  
+Product.hasMany(Categories)
 
 
-// await Size.bulkCreate([
+
+// await Categories.bulkCreate([
 //   {   
-//     size: 38,
+//     categories: "туфли",
 //     productId: 13
 // },
 //   { 
-//     size: 45,
+//     categories: "туфли",
 //     productId: 14
 // },
 // { 
-//   size: 35,
+//   categories: "кроссовки",
 //   productId: 15
 // },
 // { 
-//   size:  44,
+//   categories: "туфли",
 //   productId: 16
 // },
 // { 
-//   size: 46,
+//   categories: "кроссовки",
 //   productId: 17
 // },
 // { 
-//   size: 43,
+//   categories: "ботинки",
 //   productId: 18
 // },
 // { 
-//   size: 43,
+//   categories: "ботинки",
 //   productId: 19
 // },
 // { 
-//   size: 43,
+//   categories: "ботинки",
 //   productId: 20
-// },
-
+// }
 
 // ]);

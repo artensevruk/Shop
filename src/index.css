@@ -242,6 +242,16 @@ body {
   padding-right: 32px;
   background-color: black;
 }
+
+.select{
+  background: burlywood;
+  padding: 10px;
+  margin-bottom: 40px;
+  border-radius: 40px;
+  color: white;
+}
+
+
 .item_container {
   padding-left: 20px;
   padding-top: 30px;

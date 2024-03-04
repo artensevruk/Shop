@@ -5,6 +5,9 @@ import { Product } from "./productModel.js";
 // import { Basket } from "./productModel.js";
 import { CartProduct } from "./cartModel.js";
 import { queries } from "@testing-library/react";
+import { Size } from "./sizeModul.js";
+import { Color } from "./colorModel.js";
+import { Categories } from "./categoriesModel.js";
 
 const port = 8081;
 const app = express();
@@ -12,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/products", async function (req, res) {
-  const result = await Product.findAll({ raw: true });
+  const result = await Product.findAll({ include: [Size , Color , Categories]  })
   res.send(result);
 });
 

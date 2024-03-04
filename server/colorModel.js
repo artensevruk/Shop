@@ -2,15 +2,15 @@ import { Sequelize , DataTypes, INTEGER, DECIMAL } from "sequelize";
 import { sequelize } from "./connectDatabase.js";
 import { Product } from "./productModel.js";
 
-export const  Size =   sequelize.define('size', {
+export const  Color = await  sequelize.define('color', {
   // Model attributes are defined here
   id: {
     type: DataTypes.INTEGER.UNSIGNED,
     autoIncrement: true,
     primaryKey: true
   },
-  size: {
-    type: DataTypes.INTEGER,
+  color: {
+    type: DataTypes.STRING,
     allowNull: false
   }
 }, {
@@ -19,43 +19,44 @@ export const  Size =   sequelize.define('size', {
   // Other model options go here
 }); 
 
- Product.hasMany(Size)
-  
+ Product.hasMany(Color)
 
+//  await sequelize.sync({alter:true})
 
-// await Size.bulkCreate([
+// await Color.bulkCreate([
 //   {   
-//     size: 38,
+//     color: "White",
 //     productId: 13
 // },
 //   { 
-//     size: 45,
+//     color: "White",
 //     productId: 14
 // },
 // { 
-//   size: 35,
+//   color: "Pink",
 //   productId: 15
 // },
 // { 
-//   size:  44,
+//   color: "White",
 //   productId: 16
 // },
 // { 
-//   size: 46,
+//   color: "Purple",
 //   productId: 17
 // },
 // { 
-//   size: 43,
+//   color: "Purple",
 //   productId: 18
 // },
 // { 
-//   size: 43,
+//   color: "Pink",
 //   productId: 19
 // },
 // { 
-//   size: 43,
+//   color: "Black",
 //   productId: 20
-// },
-
+// }
 
 // ]);
+
+// await sequelize.sync({alter:true})
