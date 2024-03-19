@@ -7,7 +7,6 @@ import reportWebVitals from "./reportWebVitals";
 import { Registration } from "./components/Registration";
 import { Catalog } from "./components/Catalog";
 import { ItemContainer } from "./components/ItemContainer";
-import { Entrance } from "./components/Entrance";
 import { Basket } from "./components/Basket";
 
 const router = createBrowserRouter(

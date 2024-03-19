@@ -1,4 +1,3 @@
-import goods from "../Catalog.json";
 import {getData} from "../getData" 
 import {useQuery} from 'react-query'
 
