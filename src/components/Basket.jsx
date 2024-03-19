@@ -26,9 +26,14 @@ const ElementBasket = ({ productBasket }) => {
       <h3>{productBasket.product.name}</h3>
       <img src={productBasket.product.image} />
       <p>{productBasket.product.price} руб</p>
+      <div className="containerButton">
       <button onClick={mutation.mutate} className="buy">
         Удалить
       </button>
+      <button onClick={console.log(productBasket.product)} className="buy">
+        Купить
+      </button>
+      </div>
     </div>
   );
 };

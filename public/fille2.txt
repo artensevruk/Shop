@@ -1,0 +1,2 @@
+{"id":19,"name":"Кроссовки","price":"256.00","image":"image/sticker5.png","sizes":[{"id":60,"size":43,"productId":19}],"colors":[{"id":15,"color":"Pink","productId":19},
+{"id":23,"color":"Pink","productId":19}],"categories":[{"id":7,"categories":"ботинки","productId":19}]},{"id":20,"name":"Кроссовки","price":"256.00","image":"image/sticker6.png","sizes":[{"id":61,"size":43,"productId":20}],"colors":[{"id":16,"color":"Black","productId":20},{"id":24,"color":"Black","productId":20}],"categories":[{"id":8,"categories":"ботинки","productId":20}]}]

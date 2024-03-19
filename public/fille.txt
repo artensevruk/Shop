@@ -1,0 +1,1 @@
+[{"id":61,"size":43,"productId":20}],"colors":[{"id":16,"color":"Black","productId":20},{"id":24,"color":"Black","productId":20}],"categories":[{"id":8,"categories":"ботинки","productId":20}]}]
