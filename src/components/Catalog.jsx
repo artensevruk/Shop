@@ -1,21 +1,11 @@
-import {getData} from "../getData" 
+import { getData } from '../api';
 import {useQuery} from 'react-query'
-
+import { addBasket } from "../api";
 
 
 export const ElementCatalog = ({ product }) => {
 
-  const addBasket = () =>{
-    fetch('http://localhost:8081/carts', {
-    method: 'POST', // Здесь так же могут быть GET, PUT, DELETE
-    body: JSON.stringify(product), // Тело запроса в JSON-формате
-    headers: {
-      // Добавляем необходимые заголовки
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  })
-  }
-
+  const addBasketProducts = () => addBasket(product)
 
 
   return (
@@ -33,7 +23,7 @@ export const ElementCatalog = ({ product }) => {
       {product.colors.map((element) =>  <option key={product.id} defaultValue={product.id}>{element.color}</option>)}
       </select>
       </div>
-      <button onClick={addBasket} className="send">Добавить в корзину</button>
+      <button onClick={addBasketProducts} className="send">Добавить в корзину</button>
     </div>
   );
 };
