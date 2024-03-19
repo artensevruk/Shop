@@ -1,4 +1,4 @@
-import { Sequelize , DataTypes, INTEGER, DECIMAL } from "sequelize";
+import { DataTypes} from "sequelize";
 import { sequelize } from "./connectDatabase.js";
 import { Product } from "./productModel.js";
 

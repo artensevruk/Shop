@@ -1,10 +1,7 @@
-import express, { request } from "express";
+import express from "express";
 import cors from "cors";
 import { Product } from "./productModel.js";
-// import { Size } from "./productModel.js";
-// import { Basket } from "./productModel.js";
 import { CartProduct } from "./cartModel.js";
-import { queries } from "@testing-library/react";
 import { Size } from "./sizeModul.js";
 import { Color } from "./colorModel.js";
 import { Categories } from "./categoriesModel.js";
