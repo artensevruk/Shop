@@ -25,6 +25,5 @@ function App() {
 }
 
 
-getDataBasket();
-getData()
+
 export default App;
