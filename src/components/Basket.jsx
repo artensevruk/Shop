@@ -30,7 +30,7 @@ const ElementBasket = ({ productBasket }) => {
       <button onClick={mutation.mutate} className="buy">
         Удалить
       </button>
-      <button onClick={console.log(productBasket.product)} className="buy">
+      <button  className="buy">
         Купить
       </button>
       </div>

@@ -14,7 +14,6 @@ export const ElementCatalog = ({ product }) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   })
-    .then(() => console.log("Hello"))
   }
 
 
@@ -41,7 +40,7 @@ export const ElementCatalog = ({ product }) => {
 
 export const Catalog = () => {
   const query  = useQuery("product" , getData )
-  console.log(query)
+  
   return (
     <div className="Catalog">
       <div className="Title">

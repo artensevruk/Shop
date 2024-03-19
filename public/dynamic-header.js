@@ -10,14 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
       hederCenter = header.offsetHeight / 2
     }
 
-    console.log(hederCenter)
+   
 
 
     if (scrollTop >= hederCenter) {
       header_cont.classList.add("header_container2");
-      console.log("Вниз");
+      
     } else {
-      console.log("Вверх");
+      
       header_cont.classList.remove("header_container2");
       header.style.marginTop = `0px`;
     }

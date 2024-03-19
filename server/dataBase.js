@@ -18,8 +18,7 @@ export const serverToBasket = () =>{
 }
 
 
-console.log(serverToBasket);
-console.log(server);
+
 
 
 
