@@ -26,8 +26,10 @@ export const ElementCatalog = ({ product }) => {
       <p>{product.name}</p>
       <p> Цена :{product.price}</p>
      <p>
+     <select className="select">
       Размер :
       {product.sizes.map((element) =>  <option key={product.id} defaultValue={product.id}>{element.size}</option>)}
+      </select>
       </p>
       <div>
       <select className="select">
